@@ -1,16 +1,18 @@
-import CabeceraCV from "./Components/CabeceraCV.jsx";
-import Perfil from "./Components/Perfil.jsx";
-import Educacion from "./Components/Educacion.jsx";
-import Experiencia from "./Components/Experiencia.jsx";
+// src/App.jsx
+import CabeceraCV from './components/CabeceraCV';
+import Perfil from './components/Perfil';
+import Experiencia from './components/Experiencia';
+import Educacion from './components/Educacion';
 
+import { datosPersonales, resumen, experiencias, educacion } from './data';
 
 function App() {
   return (
     <div>
-      <CabeceraCV />
-      <Perfil />
-      <Educacion />
-      <Experiencia />
+      <CabeceraCV {...datosPersonales} />
+      <Perfil resumen={resumen} />
+      <Experiencia experiencias={experiencias} />
+      <Educacion educacion={educacion} />
     </div>
   );
 }
